@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const puppeteer = require('puppeteer');
 
-app.get('/ss', async (req, res) => {
+app.get('*', async (req, res) => {
+    console.log("on")
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   
